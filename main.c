@@ -123,17 +123,17 @@ int main(int argc, char* argv[])
 
                     }
 
-                    texrectitle.x = 400;
-                    texrectitle.y = 300;
+                    texrectitle.x = 360;
+                    texrectitle.y = 220;
                     texrectitle.w = 80;
                     texrectitle.h = 35;
-                    texrecplay.x = 400;
-                    texrecplay.y = 400;
+                    texrecplay.x = 360;
+                    texrecplay.y = 320;
                     texrecplay.w = 80;
                     texrecplay.h = 35;
 
-                    texrecquit.x = 400;
-                    texrecquit.y = 500;
+                    texrecquit.x = 360;
+                    texrecquit.y = 420;
                     texrecquit.w = 80;
                     texrecquit.h = 35;
 
@@ -230,7 +230,7 @@ int main(int argc, char* argv[])
 
         if(clock()-startTime >= randomMillisecs){
                             if((ball->yVel == 0) && (ball->xVel > 1) && (done2 == false) &&((ball->ypos  < ((p2->ypos + 100)) )) && ((ball->ypos  > ((p2->ypos )) ))){
-                    printf("%d", randomnum);
+                    
 
             if(randomnum == 0)
             {
@@ -242,7 +242,6 @@ int main(int argc, char* argv[])
             }
             else if(randomnum == 1)
             { trigger = true;
-            puts("first option");
                 if(count < 7)
                 {
                     p2->rect->y -= 4;
@@ -261,7 +260,6 @@ int main(int argc, char* argv[])
             else if(randomnum == 2)
             {
                 trigger = true;
-                puts("second option");
                 if(count < 7)
                 {
                     p2->rect->y += 4;
@@ -270,7 +268,7 @@ int main(int argc, char* argv[])
                 }
                 else
                 {
-                    puts("third option");
+                    
             startTime = clock();
             randomPixelsAwayFromCenter = rand()%50;
              randomMillisecs = rand()%90;
@@ -282,20 +280,20 @@ int main(int argc, char* argv[])
             }
         else if((ball->ypos < ((p2->ypos+25) - randomPixelsAwayFromCenter)))
         {
-            puts("moveup");
+            
             moveUp(p2);
 
         }
         else if(ball->ypos  > ((p2->ypos + 75) + randomPixelsAwayFromCenter))
         {
-            puts("movedown");
+         
             moveDown(p2);
 
         }
         else
         {
 
-puts("stop");
+
                 stop(p2);
             startTime = clock();
             randomPixelsAwayFromCenter = rand()%50;
@@ -486,8 +484,8 @@ puts("stop");
                 if((e.button.x >=texrecplay.x) && (e.button.x <= (texrecplay.w + texrecplay.x)) && (e.button.y >= texrecplay.y) && (e.button.y <= (texrecplay.y + texrecplay.h)))
                 {
                     //f2 = TTF_OpenFont("arial.ttf",24);
-                    texrecplay.x = 365;
-                    texrecplay.y = 365;
+                    texrecplay.x = 325;
+                    texrecplay.y = 320;
                     texrecplay.w = 160;
                     texrecplay.h = 70;
                     if(e.type == SDL_MOUSEBUTTONDOWN && e.button.button == SDL_BUTTON_LEFT)
@@ -497,8 +495,8 @@ puts("stop");
                 }
                 else
                 {
-                    texrecplay.x = 400;
-                    texrecplay.y = 400;
+                    texrecplay.x = 360;
+                    texrecplay.y = 320;
                     texrecplay.w = 80;
                     texrecplay.h = 35;
                 }
@@ -506,8 +504,8 @@ puts("stop");
                 if((e.button.x >=texrecquit.x) && (e.button.x <= (texrecquit.w + texrecquit.x)) && (e.button.y >= texrecquit.y) && (e.button.y <= (texrecquit.y + texrecquit.h)))
                 {
                     //f2 = TTF_OpenFont("arial.ttf",24);
-                    texrecquit.x = 365;
-                    texrecquit.y = 465;
+                    texrecquit.x = 320;
+                    texrecquit.y = 420;
                     texrecquit.w = 160;
                     texrecquit.h = 70;
                     if(e.type == SDL_MOUSEBUTTONDOWN && e.button.button == SDL_BUTTON_LEFT)
@@ -517,8 +515,8 @@ puts("stop");
                 }
                 else
                 {
-                    texrecquit.x = 400;
-                    texrecquit.y = 500;
+                    texrecquit.x = 360;
+                    texrecquit.y = 420;
                     texrecquit.w = 80;
                     texrecquit.h = 35;
                 }
